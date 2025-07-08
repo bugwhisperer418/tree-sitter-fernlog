@@ -1,4 +1,4 @@
-module git.sr.ht/~bugwhisperer/tree-sitter-fern
+module git.sr.ht/~bugwhisperer/tree-sitter-fernlog
 
 go 1.22
 

@@ -2,21 +2,21 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "fern",
-      "camelcase": "Fern",
-      "title": "Fern",
-      "scope": "source.fern",
+      "name": "fernlog",
+      "camelcase": "Fernlog",
+      "title": "Fernlog",
+      "scope": "source.fernlog",
       "file-types": [
-        "fern"
+        "log"
       ],
-      "injection-regex": "^fern$",
-      "class-name": "TreeSitterFern"
+      "injection-regex": "^fernlog$",
+      "class-name": "TreeSitterFernlog"
     }
   ],
   "metadata": {
     "version": "0.1.0",
     "license": "MIT",
-    "description": "Markdown-like parser for the Fern journal file",
+    "description": "Markdown-like parser for the Fern Journal Log files",
     "authors": [
       {
         "name": "Andie Keller",
@@ -25,7 +25,7 @@
       }
     ],
     "links": {
-      "repository": "https://git.sr.ht/~bugwhisperer/tree-sitter-fern"
+      "repository": "https://git.sr.ht/~bugwhisperer/tree-sitter-fernlog"
     }
   },
   "bindings": {
