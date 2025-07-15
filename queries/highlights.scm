@@ -11,6 +11,8 @@
 
 ;; Entry type markers - use different colors for different types
 (todo) @punctuation.special
+(done) @argument
+(cancelled) @function
 (feel) @type
 
 ;; Special markers
