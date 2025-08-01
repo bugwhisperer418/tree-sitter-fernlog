@@ -22,3 +22,12 @@
 ;; Entries with emphasis marker (should be very visible)
 (entry 
   mark: (emphasis)) @error
+
+;; Inline content highlighting
+(tag) @tag
+
+(code) @string.special
+
+;; Link highlighting
+(link_markdown) @markup.link
+(link_wiki) @markup.link

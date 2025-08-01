@@ -79,8 +79,44 @@ module.exports = grammar({
       $._blank_line
     ),
 
-    // Terminal symbols
-    _text: _ => /[^\r\n]+/,
+    // Terminal symbols - updated to support inline content
+    _text: $ => repeat1(choice(
+      $.inline_text,
+      $.tag,
+      $.code,
+      $.link_markdown,
+      $.link_wiki
+    )),
+
+    // Inline content rules
+    inline_text: _ => /[^#`\[\r\n]+/,
+    tag: $ => seq(
+      "#",
+      field("name", /[a-zA-Z0-9_-]+/)
+    ),
+    code: $ => seq(
+      "`",
+      field("content", /[^`\r\n]+/),
+      "`"
+    ),
+    link_markdown: $ => seq(
+      "[",
+      field("text", alias(/[^\]\r\n]+/, $.link_text)),
+      "]",
+      "(",
+      field("url", alias(/[^)\r\n]+/, $.link_url)),
+      ")"
+    ),
+    link_wiki: $ => seq(
+      "[[",
+      field("text", alias(/[^\|\]\r\n]+/, $.link_text)),
+      optional(seq(
+        /\s*\|\s*/,
+        field("url", alias(/[^\]\r\n]+/, $.link_url))
+      )),
+      "]]"
+    ),
+
     _whitespace: _ => /[ \t]+/,
     _blank_line: _ => /[ \t]*\n/,
 

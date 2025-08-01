@@ -23,11 +23,12 @@
 
 ## Another Section with Content
 ### day 1
-❤ Feeling good about progress
-- Notes about the day
-● Final todo item
+❤ Feeling good about progress with #productivity and #journal
+- Notes about the day with `inline code` example
+● Final todo item with [link text](https://example.com)
+- Entry with [[wiki link | https://wiki.example.com]]
 #### End of Day Review
-- Reflection on accomplishments
-● Tomorrow's priorities
-✔ Today's completed goals
+- Reflection on accomplishments using #reflection tag
+● Tomorrow's priorities with `code snippets` and links
+✔ Today's completed goals include #tags, `code`, [markdown links](url), and [[wiki style | url]]
 
